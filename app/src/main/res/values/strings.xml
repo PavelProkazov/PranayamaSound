@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PranayamaSound</string>
+    <string name="play">play</string>
+    <string name="stop">stop</string>
+    <string name="RB1">4x4</string>
+    <string name="RB2">5x5</string>
+    <string name="RB3">6x6</string>
+    <string name="RB4">7x7</string>
+    <string name="RB5">8x8</string>
+    <string name="RB6">9x9</string>
+    <string name="RB7">10x10</string>
+    <string name="hint_editText">hint_editText</string>
+    <string name="hint_TextView">hint_text_view</string>
+</resources>

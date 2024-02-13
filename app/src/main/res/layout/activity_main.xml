@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/play"/>
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/play"
+        android:text="@string/stop"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_editText"
+        android:layout_toRightOf="@id/stop"
+        android:inputType="number"
+        android:ems="6"
+        android:id="@+id/editText"
+        android:maxLength="5"
+
+        />
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/RBG"
+        android:layout_below="@+id/stop">
+
+        <RadioButton
+            android:id="@+id/RB1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/RB1"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/RB2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/RB2"
+            />
+
+        <RadioButton
+            android:id="@+id/RB3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/RB3" />
+
+        <RadioButton
+            android:id="@+id/RB4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/RB4" />
+        <RadioButton
+            android:id="@+id/RB5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/RB5" />
+        <RadioButton
+            android:id="@+id/RB6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/RB6" />
+        <RadioButton
+            android:id="@+id/RB7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/RB7" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RBG"
+        android:id="@+id/textView"
+        android:hint="@string/hint_TextView"/>
+
+</RelativeLayout>
