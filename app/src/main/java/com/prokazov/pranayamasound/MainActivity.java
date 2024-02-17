@@ -8,6 +8,7 @@ import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.text.format.DateUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                     {
                         @Override
                         public void onTick(long millisUntilFinished) {
-                            textView.setText(Long.toString(millisUntilFinished/1000));
+                            textView.setText(DateUtils.formatElapsedTime(millisUntilFinished/1000));
 
                         }
 
@@ -213,6 +214,7 @@ public class MainActivity extends AppCompatActivity {
                if(!mp.equals(null)) {
                    if (mp.isPlaying()) {
                        mp.stop();
+                       textView.setText("0");
                    }
                }
                if (!countDownTimer.equals(null)) {

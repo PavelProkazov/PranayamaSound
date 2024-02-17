@@ -5,28 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+<com.google.android.material.chip.ChipGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@+id/textView">
     <Button
         android:id="@+id/play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/play"/>
+        android:text="@string/play" />
+
     <Button
         android:id="@+id/stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/play"
-        android:text="@string/stop"/>
+
+        android:layout_toRightOf="@+id/play"
+        android:text="@string/stop" />
+</com.google.android.material.chip.ChipGroup>
+
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_editText"
-        android:layout_toRightOf="@id/stop"
-        android:inputType="number"
-        android:ems="6"
         android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="6"
+        android:hint="@string/hint_editText"
+        android:inputType="number"
         android:maxLength="5"
 
+        android:minHeight="48dp"
         />
 
 
@@ -35,21 +43,21 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:id="@+id/RBG"
-        android:layout_below="@+id/stop">
+        android:layout_below="@+id/editText"
+        >
 
         <RadioButton
             android:id="@+id/RB1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/RB1"
-            android:checked="true"/>
+            android:checked="true"
+            android:text="@string/RB1" />
 
         <RadioButton
             android:id="@+id/RB2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/RB2"
-            />
+            android:text="@string/RB2"/>
 
         <RadioButton
             android:id="@+id/RB3"
@@ -62,28 +70,47 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/RB4" />
+
+    </RadioGroup>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RBG2"
+
+        android:orientation="horizontal"
+
+
+        android:layout_below="@id/RBG"
+
+        >
+
         <RadioButton
             android:id="@+id/RB5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/RB5" />
+
         <RadioButton
             android:id="@+id/RB6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/RB6" />
+
         <RadioButton
             android:id="@+id/RB7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/RB7" />
+            android:text="@string/RB7"/>
     </RadioGroup>
-
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/RBG"
         android:id="@+id/textView"
-        android:hint="@string/hint_TextView"/>
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/RBG2"
+        android:hint="@string/hint_TextView"
+        android:gravity="center"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="48sp" />
 
 </RelativeLayout>
